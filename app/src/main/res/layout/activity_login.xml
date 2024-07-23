@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AmareloDinâmico"
+    android:layout_gravity="center"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="400dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="-150dp"
+        android:src="@drawable/logo_app" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="60dp"
+        android:text="Login"
+        android:textColor="@color/Azul"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:layout_marginTop="160dp"
+        android:layout_marginStart="110dp"/>
+
+    <EditText
+        android:id="@+id/emailSegundaTela"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/quadrado"
+        android:ems="10"
+        android:hint="    Insira seu email"
+        android:textColorHint="@color/Branco"
+        android:layout_marginTop="250dp"
+        android:layout_marginStart="60dp"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/senhaSegundaTela"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:textColorHint="@color/Branco"
+        android:ems="10"
+        android:hint="  Insira sua senha"
+        android:background="@drawable/quadrado"
+        android:layout_marginTop="315dp"
+        android:layout_marginStart="60dp"
+        android:inputType="textPassword" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/olho_aberto"
+        android:layout_marginStart="310dp"
+        android:layout_marginTop="323dp"
+        android:id="@+id/olho_aberto"/>
+
+    <Button
+        android:id="@+id/botaoLogin"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/Azul"
+        android:text="Entrar"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="130dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="19dp"
+        android:text="Esqueceu a senha?"
+        android:textColor="@color/Azul"
+        android:textStyle="bold"
+        android:layout_marginTop="450dp"
+        android:layout_marginStart="125dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="Nova conta?"
+        android:textColor="@color/Azul"
+        android:textStyle="bold"
+        android:layout_marginTop="530dp"
+        android:layout_marginStart="170dp"/>
+
+    <Button
+        android:id="@+id/entrarConta"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/Azul"
+        android:text="Entrar na conta"
+        android:layout_marginTop="650dp"
+        android:layout_marginStart="130dp"/>
+
+    <ImageView
+        android:id="@+id/facebook_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="580dp"
+        app:srcCompat="@drawable/facebook_icon" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="58dp"
+        android:src="@drawable/youtube_icon"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="580dp"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="590dp"
+        android:src="@drawable/google_icon" />
+
+</RelativeLayout>

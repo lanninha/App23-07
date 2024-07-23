@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:gravity="bottom"
+    android:padding="16dp"
+    android:background="@color/AmareloDinâmico"
+    android:id="@+id/menu_header">
+
+    <ImageView
+        android:id="@+id/photo_header"
+        android:layout_width="280dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo_app" />
+
+    <TextView
+        android:layout_width="370dp"
+        android:layout_height="40dp"
+        android:fontFamily="sans-serif"
+        android:text="Mercado Livre"
+        android:textColor="@color/Azul"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+</LinearLayout>
