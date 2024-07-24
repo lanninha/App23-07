@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AmareloDinâmico"
+    tools:context=".Cadastro">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="400dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="-150dp"
+        android:src="@drawable/logo_app" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastro"
+        android:textSize="60dp"
+        android:fontFamily="serif-monospace"
+        android:layout_marginTop="160dp"
+        android:layout_marginStart="55dp"
+        android:textStyle="bold"
+        android:textColor="@color/Azul"/>
+
+    <EditText
+        android:id="@+id/emailCadastro"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/quadrado"
+        android:ems="10"
+        android:paddingLeft="25dp"
+        android:hint="Insira seu email"
+        android:textColorHint="@color/Branco"
+        android:layout_marginTop="250dp"
+        android:layout_marginStart="60dp"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/nomeUsario"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:paddingLeft="25dp"
+        android:textColorHint="@color/Branco"
+        android:background="@drawable/quadrado"
+        android:hint="Nome de usuário"
+        android:layout_marginTop="315dp"
+        android:layout_marginStart="60dp"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/senhaCadastro"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:textColorHint="@color/Branco"
+        android:ems="10"
+        android:paddingLeft="25dp"
+        android:hint="Insira sua senha"
+        android:background="@drawable/quadrado"
+        android:layout_marginTop="375dp"
+        android:layout_marginStart="60dp"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/senhaCadastro2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:textColorHint="@color/Branco"
+        android:ems="10"
+        android:paddingLeft="25dp"
+        android:hint="Confirme a senha"
+        android:background="@drawable/quadrado"
+        android:layout_marginTop="435dp"
+        android:layout_marginStart="60dp"
+        android:inputType="textPassword" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/olho_aberto"
+        android:layout_marginStart="312dp"
+        android:layout_marginTop="382dp"
+        android:id="@+id/olho_aberto1"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/olho_aberto"
+        android:layout_marginStart="312dp"
+        android:layout_marginTop="442dp"
+        android:id="@+id/olho_aberto2"/>
+
+    <TextView
+        android:id="@+id/aceitar"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:text="Ao se registrar, você concorda com nossos "
+        android:textColor="@color/Azul"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="520dp"/>
+
+    <TextView
+        android:id="@+id/termos"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:text="Termos de uso"
+        android:textColor="@color/Branco"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="540dp"/>
+
+
+    <TextView
+        android:id="@+id/nossa"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:text="e as nossas"
+        android:textColor="@color/Azul"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="540dp"/>
+
+
+    <TextView
+        android:id="@+id/politica"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:text="Políticas de privacidade"
+        android:textColor="@color/Branco"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="540dp"/>
+
+    <Button
+        android:id="@+id/cadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="580dp"
+        android:backgroundTint="@color/Azul"
+        android:text="Cadastrar"/>
+
+    <TextView
+        android:id="@+id/opcao"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="630dp"
+        android:text="Ou continue com: "
+        android:textColor="@color/Azul"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/facebook_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="650dp"
+        app:srcCompat="@drawable/facebook_icon" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="660dp"
+        android:src="@drawable/google_icon" />
+
+
+</RelativeLayout>

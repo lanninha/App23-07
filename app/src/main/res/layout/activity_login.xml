@@ -33,11 +33,20 @@
         android:layout_height="50dp"
         android:background="@drawable/quadrado"
         android:ems="10"
-        android:hint="    Insira seu email"
+        android:paddingLeft="25dp"
+        android:hint="Insira seu email"
         android:textColorHint="@color/Branco"
         android:layout_marginTop="250dp"
         android:layout_marginStart="60dp"
         android:inputType="textEmailAddress"/>
+
+    <TextView
+        android:id="@+id/emailError"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="Email ou senha incorretos"
+        android:textColor="@color/Vermelho"
+        android:visibility="gone" />
 
     <EditText
         android:id="@+id/senhaSegundaTela"
@@ -45,18 +54,28 @@
         android:layout_height="50dp"
         android:textColorHint="@color/Branco"
         android:ems="10"
-        android:hint="  Insira sua senha"
+        android:paddingLeft="25dp"
+        android:hint="Insira sua senha"
         android:background="@drawable/quadrado"
         android:layout_marginTop="315dp"
         android:layout_marginStart="60dp"
         android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/senhaError"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="Email ou senha incorretos"
+        android:textColor="@color/Vermelho"
+        android:textColorHint="@color/Branco"
+        android:visibility="gone" />
 
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/olho_aberto"
         android:layout_marginStart="310dp"
-        android:layout_marginTop="323dp"
+        android:layout_marginTop="321dp"
         android:id="@+id/olho_aberto"/>
 
     <Button
@@ -69,6 +88,7 @@
         android:layout_marginStart="130dp"/>
 
     <TextView
+        android:id="@+id/esqueceuSenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="19dp"
@@ -79,9 +99,10 @@
         android:layout_marginStart="125dp"/>
 
     <TextView
+        android:id="@+id/novaConta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15dp"
+        android:textSize="17dp"
         android:text="Nova conta?"
         android:textColor="@color/Azul"
         android:textStyle="bold"
