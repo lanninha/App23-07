@@ -40,14 +40,6 @@
         android:layout_marginStart="60dp"
         android:inputType="textEmailAddress"/>
 
-    <TextView
-        android:id="@+id/emailError"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:text="Email ou senha incorretos"
-        android:textColor="@color/Vermelho"
-        android:visibility="gone" />
-
     <EditText
         android:id="@+id/senhaSegundaTela"
         android:layout_width="300dp"
@@ -60,15 +52,6 @@
         android:layout_marginTop="315dp"
         android:layout_marginStart="60dp"
         android:inputType="textPassword" />
-
-    <TextView
-        android:id="@+id/senhaError"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:text="Email ou senha incorretos"
-        android:textColor="@color/Vermelho"
-        android:textColorHint="@color/Branco"
-        android:visibility="gone" />
 
     <ImageView
         android:layout_width="40dp"

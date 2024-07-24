@@ -3,7 +3,6 @@ package com.example.dia11
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -14,10 +13,9 @@ import java.io.IOException
 
 class Login : AppCompatActivity() {
 
+    // Declaração das variáveis de UI
     private lateinit var inserirEmail: EditText
     private lateinit var inserirSenha: EditText
-    private lateinit var verificarEmail: TextView
-    private lateinit var verificarSenha: TextView
     private lateinit var buttonLogin: Button
     private lateinit var cadastro: TextView
 
@@ -25,27 +23,28 @@ class Login : AppCompatActivity() {
     private var tentativas = 0
     private val tempoDesabilitado: Long = 5000 // 5 segundos
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        // Inicialização das views
         cadastro = findViewById(R.id.novaConta)
         inserirEmail = findViewById(R.id.emailSegundaTela)
         inserirSenha = findViewById(R.id.senhaSegundaTela)
-        verificarEmail = findViewById(R.id.emailError)
-        verificarSenha = findViewById(R.id.senhaError)
         buttonLogin = findViewById(R.id.botaoLogin)
 
         supportActionBar?.hide()
         window.statusBarColor = Color.parseColor("#2D3176")
 
+        // Configuração do listener para o texto de cadastro
         cadastro.setOnClickListener {
             val intent = Intent(this, Cadastro::class.java)
             startActivity(intent)
         }
 
+        // Configuração do listener para o botão de login
         buttonLogin.setOnClickListener {
+            // Validação das credenciais
             validarCredenciais()
         }
     }
@@ -54,31 +53,22 @@ class Login : AppCompatActivity() {
         val email = inserirEmail.text.toString().trim()
         val senha = inserirSenha.text.toString().trim()
 
-        var emailValido = true
-        var senhaValida = true
-
-        if (!isValidEmail(email)) {
-            verificarEmail.visibility = View.VISIBLE
-            emailValido = false
-        } else {
-            verificarEmail.visibility = View.GONE
+        // Verifica se o campo de email está vazio
+        if (email.isEmpty()) {
+            // Exibe mensagem de erro
+            Toast.makeText(this, "Por favor, insira seu email.", Toast.LENGTH_SHORT).show()
+            return
         }
 
-        if (senha.isEmpty() || senha.length < 8) {
-            verificarSenha.visibility = View.VISIBLE
-            senhaValida = false
-        } else {
-            verificarSenha.visibility = View.GONE
+        // Verifica se o campo de senha está vazio
+        if (senha.isEmpty()) {
+            // Exibe mensagem de erro
+            Toast.makeText(this, "Por favor, insira sua senha.", Toast.LENGTH_SHORT).show()
+            return
         }
 
-        if (emailValido && senhaValida) {
-            realizarLogin(email, senha)
-        } else {
-            tentativas++
-            if (tentativas >= maximoTentativas) {
-                desabilitarLoginTemporariamente()
-            }
-        }
+        // Se ambos email e senha forem válidos, realiza o login
+        realizarLogin(email, senha)
     }
 
     private fun realizarLogin(email: String, senha: String) {
@@ -99,25 +89,8 @@ class Login : AppCompatActivity() {
             // Login bem-sucedido
             Toast.makeText(this, "Login bem-sucedido. Seja bem-vindo, ${usuario.nome}!", Toast.LENGTH_SHORT).show()
         } else {
+            // Email ou senha incorretos
             Toast.makeText(this, "Email ou senha incorretos.", Toast.LENGTH_SHORT).show()
         }
-    }
-
-    private fun isValidEmail(email: String): Boolean {
-        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
-    }
-
-    private fun desabilitarLoginTemporariamente() {
-        buttonLogin.isEnabled = false
-        inserirEmail.isEnabled = false
-        inserirSenha.isEnabled = false
-
-        val handler = android.os.Handler(android.os.Looper.getMainLooper())
-        handler.postDelayed({
-            buttonLogin.isEnabled = true
-            inserirEmail.isEnabled = true
-            inserirSenha.isEnabled = true
-            tentativas = 0
-        }, tempoDesabilitado)
     }
 }

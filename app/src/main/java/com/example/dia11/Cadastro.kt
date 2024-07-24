@@ -117,7 +117,6 @@ class Cadastro : AppCompatActivity() {
             textoSenha.transformationMethod = PasswordTransformationMethod.getInstance()
             imagemMostrarSenha.setImageResource(R.drawable.olho_fechado)
         }
-
         textoSenha.setSelection(textoSenha.text.length)
     }
 }
